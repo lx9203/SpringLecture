@@ -1,0 +1,10 @@
+package com.example.spring01;
+
+import org.junit.runner.RunWith;
+
+//	JUnit 4.0으로 현재 클래스를 실행 시키기 위해
+@RunWith(SptingJUnit4ClassRunner.class)
+
+public class MyBatisTest {
+
+}

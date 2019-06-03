@@ -1,0 +1,36 @@
+package com.example.spring01.model.dto;
+
+public class ProductDTO {
+	private String name;
+	private double price;
+	
+	public ProductDTO(String name, String price) {
+		this.name = name;
+		this.price = price;
+	}
+	
+	public ProductDTO() {
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getPrice() {
+		return price;
+	}
+
+	public void setPrice(String price) {
+		this.price = price;
+	}
+
+	@Override
+	public String toString() {
+		return "ProductDTO [name=" + name + ", price=" + price + "]";
+	}
+	
+}
