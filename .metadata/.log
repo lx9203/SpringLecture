@@ -6659,3 +6659,15 @@ Caused by: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
 
 !ENTRY org.eclipse.jdt.debug 2 0 2019-06-03 16:27:04.108
 !MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-03 17:40:59.513
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.IsEHaGqq
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-03 17:40:59.513
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.IsEHaGqq
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-03 17:40:59.513
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-03 17:40:59.513
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.IsEHaGqq => OK

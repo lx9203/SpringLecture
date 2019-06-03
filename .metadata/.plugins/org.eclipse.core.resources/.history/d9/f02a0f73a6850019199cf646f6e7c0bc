@@ -1,8 +1,0 @@
-package com.example.spring01.controller;
-
-//ajax 전용 컨트롤러(백그라운드에서 실행)
-//스프링4.0부터 지원
-@RestController
-public class SampleRestController {
-	
-}
