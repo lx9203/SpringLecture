@@ -1,0 +1,364 @@
+﻿set linesize 180;
+
+char    고정길이  -> 비효율적, 검색이 빠름
+
+varChar 가변길이  ->  효율적,  검색이 느림
+
+alias처리
+select ename 이름, salary 월급, salary*12 연봉 from employee;
+
+공백넣기
+select ename "이   름", salary "월   급", salary "연   봉" from employee;
+
+select ename, salary ,job, dno, commission, salary*12, salary*12+commission from employee;
+-> commission이 없는 사람은 null값으로 인식되어 값이 나오지 않음
+
+select ename "이름", salary "월급",job "담당", dno "부서번호", nvl(commission,0) "커미션", 
+	salary*12 "연봉", salary*12+nvl(commission,0) "연봉+커미션" from employee;
+nvl -> null value를 지정 값으로 인식
+
+중복 제거 검색
+select distinct dno from employee;
+
+select sysdate from employee;
+
+오라클 에서는 dual이라는 dummy 테이블을 제공한다.
+dummy테이블에는 x라는 데이터만 저장하고 있음.
+
+select * from dual;
+
+select sysdate fro dual;
+
+---------------------------------------------------------------------------------------
+
+ex01) employee 테이블에서 급여가 1500이상인 사원을 출력하시오
+ex02) employee 테이블에서 10번 부서 소속인 사원을 출력하시오
+ex03) employee 테이블에서 입사일이 '1981/01/01' 이전인 사원을 출력하시오
+ex04) employee 테이블에서 10번 부서가 아닌 사원을 출력하시오
+ex05) employee 테이블에서 급여가 1000에서 1500 사이인 사원을 출력하시오
+ex06) employee 테이블에서 커미션이 300 이거나 500 이거나 1400인 사원을 출력하시오
+select * from employee where commission in(300, 500, 1400);
+
+Like 연산자
+% : 하나 이상의 문자와 일치하는 것 '%', '%@', '@%', '%@%'
+_ : 하나의 문자만 일치하는 것
+
+ex07) employee 테이블에서 사원의 이름에 M이 포함된 사원을 출력하시오
+ex08) employee 테이블에서 사원의 이름의 두번째 글자가 'A'인 사원을 출력하시오 '_A%'
+ex09) employee 테이블에서 commission이 null인 사원을 출력하시오
+select * from employee where commission is null;	(null이 아닐경우 is not null;)
+
+정렬명령
+order by asc : 오름차순
+order by desc : 내림차순
+
+ex10) employee 테이블에서 가장 최근에 입사한 사원부터 출력하시오
+ex11) employee 테이블에서 급여가 2000을 넘는 사원의 이름과 급여를 급여가 많은 사원부터
+	작은 사원 순으로 출력하시오
+ex12) employee 테이블에서 1981년도에 입사한 사원을 출력하시오
+ex13) employee 테이블에서 이름에 A와 E 모두를 포한하고있는 사원을 출력하시오
+
+----------------------------------------------------------------------------------------
+
+sql*Plus명령어
+오라클에서만 제공하는 툴
+L : (List)가장 최근에 실행한 쿼리문을 다시 한번 나타남
+/ : 가장 최근에 실행한 쿼리문을 다시 한번 실행함
+R : (Run)가장 최근에 실행한 쿼리문을 보여주고 실행함
+ED : (Edit)가장 최근에 실행한 쿼리문을 편집할 수 있음
+SAV : (Save) 쿼리문을 파일에 저장. 기본 확장자는 .sql
+
+exit : SQL종료 도스로 빠져나옴
+dir : 디렉토리를 표시
+host : 잠시 도스로 나옴
+exit : 다시 SQL로 돌아옴
+
+ed sample.sql;  sample.sql을 수정하고 저장할 수 있음
+
+select ename from employee;
+save sample replace;	이전 내용을 새로운 내용으로 대체
+save sample append;	이전 내용에 새로운 내용을 추가
+
+@파일명 : 외부 SQL파일 실행
+@sample
+
+화면 캡처
+spool		화면캡처 시작
+spool off	화면캡처 종료
+
+spool test
+select * from employee;
+select * from department;
+spool off
+
+column명령어
+column ename format a40;
+
+An : 문자 형식 커럼의 출력 크기를 설정
+9: 숫자 형식 칼럼의 출력 길이를 조정
+0: 지정된 길이 만큼의 앞에 0을 추가
+
+column salary format 0,000,000;
+select * from employee;
+
+column commission format 9,999,999;
+select * from employee;
+
+
+set pagesize 10;
+
+문자함수
+UPPER	대문자	
+LOWER	소문자
+INITCAP	첫글자만 대문자
+select 'oracle like',upper('oracle like'),
+lower('oracle like'),initcap('oracle like') 
+from dual;
+
+문자 조작함수
+concat : 문자열 결합(연결)
+substr : 문자열 추출
+instr  : 특정 물자열 위치값을 반환
+
+select 'i like you', concat('i', 'like')
+from dual;
+
+substr(대상, 시작위치, 추출할 문자수)
+select substr('i like you', 3, 4)
+from dual;
+
+select substr('i like you', -4, 3)
+from dual;
+
+instr(대상, 찾을 글자, 시작위치, 몇번째 발견);
+select instr('Oracle mania', 'a')
+from dual;
+
+select instr('Oracle mania', 'a', 4, 2)
+from dual;
+
+--------------------------------------------------------------------------------------
+
+ex14) employee 테이블에서 사원의 이름의 마지막 글자가 N으로 끝나는 사원을 substr을 이용해 검색하시오
+select from employee where substr(ename, -1, 1) = 'N';
+
+ex15) employee 테이블에서 87년도에 입사한 사원을 substr을 이용해 검색하시오
+select * from employee where substr(hiredate, 1, 2)=87;
+
+ex16) employee 테이블에서 이름의 세번째 자리가 'R'인 사원을 검색하시오
+select * from employee where instr(ename, 'R', 3, 1) = 3;
+
+
+--------------------------------------------------------------------------------------
+
+LPAD (Ledt Padding) : 컬럼이나 문자열을 명시된 자릿수 에서 오른쪽에 나타내고, 남은 왼쪽
+			자리를 특정 기호로 채움
+RPAD (Right Padding) : 컬럼이나 문자열을 명시된 자릿수에서 왼쪽에 나타내고, 남은 오른쪽
+			자리를 특정 기호로 채움
+
+select LPAD(salary, 10, '*');
+
+공백제거
+select '  Oracle maina  ',
+LTRIM('  Oracle maina  '),
+RTRIM('  Oracle maina  '),
+TRIM('  Oracle maina  ')
+from dual;
+
+TRIM 함수 
+컬럼이나 대상 문자열에서 특정 문자가 첫번째 글자이거나 마지막 글자이면
+잘라내고 남은 문자열만 반환
+
+select 'Oracle maina', 
+trim('a' from 'Oracle maina')
+from dual;
+
+select substr(hiredate, 1, 2)년도, substr(hiredate, 4, 2)달
+from employee;
+
+ex17) employee 테이블에서 년도에 관계없이 4월에 입사한 사원을 출력하시오
+
+숫자 함수
+ROUND : 특정 자릿수에서 반올림
+TRUNC : 특정 자릿수에서 버림
+MOD   : 입력받은 수를 나눈 나머지값을 반환
+
+round(숫자, 자릿수)
+select 98.7654, round(98.7654), round(98.7654, 2), round(98.7654 ,-1) from dual;
+
+trunc(숫자, 자릿수)
+select 98.7654, trunc(98.7654), trunc(98.7654, 2), trunc(98.7654,-1) from dual;
+
+mon(
+select mod(31,2) mod(31,5), mod(31,8) from dual;
+
+날짜함수
+sysdate : 시스템에 저장된 현재 날짜를 반환
+select sysdate from dual;
+select sysdate-1 어제, sysdate+1 내일 from dual;
+
+ex18) 근무일수를 구하시오
+select round(sysdate - hiredate) 근무일수 from employee;
+
+ex19) 특정 월을 기준으로 버림한 날짜 구하기
+select hiredate, trunc(hiredate, 'month') from employee;
+
+MONTHS_BETWEEN : 두 날짜 사이가 몇 개월인지 반환
+months_between(날짜, 날짜)
+
+ex20) 각 사원들이 근무한 개월 수 구하기
+select ename, sysdate, hiredate, 
+trunc(MONTHS_BETWEEN(sysdate, hiredate))
+from employee;
+
+next_day : 특정 날짜에서 최초로 도래하는 인자로 받은 요일의 날짜를 반환
+select sysdate, next_day(sysdate,'토요일') from dual;
+
+last_day : 해당 달의 마지막 날짜를 반환
+select ename, hiredate, last_day(hiredate) from employee;
+
+ex21) 사원 번호가 짝수인 사원을 출력하시오
+select * from employee where mod(eno, 2) = 0;
+
+형변환 함수
+to_char : 날짜형 혹은 숫자형을 문자형으로 변환
+
+to_char(number|date, 'format')
+-format는 작은 따옴표로 묶어서 대소문자를 구분해 사용
+
+format 형식
+YYYY	: 년도 표현 (4자리)
+YY 	: 년도 표현 (2자리)
+MM	: 월을 숫자로 표현
+MON	: 월을 알파벳으로 표현
+DAY 	: 요일 표현
+DY	: 요일을 약어로 표현
+
+select ename, hiredate, 
+to_char(hiredate, 'YY-MM'), 
+to_char(hiredate, 'YYYY/MM/DD DAY') 
+from employee;
+
+시간 관련 함수
+AM 또는 PM : 오전(AM), 오후(PM)
+A.M 또는 P.M : 오전(A.M), 오후(P.M)
+HH24 또는 HH12 : 24시 표기법 또는 12시표기법
+MI : 분
+SS : 초
+
+select to_char(sysdate, 'YYYY/MM/DD, HH24:MI:SS) from dual;
+
+통화 기호
+select ename, to_char(salary, 'L999,999') from employee;
+L : 각 지역별 통화 기호 (영문 시 달러화, 일어 시 엔화등)
+
+TO_DATE : 특정 데이터를 날짜형으로 변환
+select * from employee where hiredate=to_date(19810220,'YYYYMMDD');
+
+TO_NUMBER : 특정 데이터를 숫자로 변환
+select '100,000' - '50,000' from dual;
+-> select to_number('100,000','999,999')-to_number('50,000','999,999') from dual;
+
+일반함수
+nvl : null을 특정 값으로 변환
+nvl(commission,0)
+nvl(hiredate, '2019/05/30')
+nvl(jab, 'manager')
+
+nvl2함수
+nvl2(exp1, exp2, exp3) : 
+exp1을 검사하여 결과가 null이면 exp2값을 반환, 그렇지 않으면 exp3값을 반환
+select ename, salary, commission, nvl2(commission, salary*12+commission, salary*12)
+from employee
+
+NULLIF 함수
+nullif(exp1, exp2)
+두 표현식을 비교하여 동일한 경우 null값을 반환, 동일하지 않으면 exp1을 반환
+select NULLIF('A','A'), NULLIF('A','B') from dual;
+
+DECODE 함수
+select ename, dno, decode(dno, 10,'accounting',20,'research',30,'sales',40,'operations',
+'default') as dname from employee order by dno;
+
+CASE 함수
+select ename, dno, case 
+when dno = 10 then 'accounting' 
+when dno = 20 then 'research'
+else 'default'
+end as dname
+from employee;
+
+ex22) 올해 며칠이 지났는지 출력하시오
+select trunc(sysdate - to_data('2019/01/01','YYYY/MM/DD')) from dual;
+
+ex23) decode 함수로 직급에 따라 급여를 인상하도록 하시오
+	직급이 anaiyst 인 사원은 200,
+		salesman인 사원은 180,
+		manager인 사원은 150,
+		clerk인 사원은 100을 인상하시오
+select eno, ename, job, salary, decode(job, 
+'ANALYST',salary+200,
+'SALESMAN',salary+180,
+'MANAGER',salary+150,
+'CLERK',salary+100,
+salary) as update_salary from employee;
+
+ex24) 입사일을 년도 2자리(YY), 월은 숫자(MON)로 표시하고 요일은 약어(DY)로 지정하여 출력하시오
+select eno, ename, to_char(hiredate, 'YY/MON/DD DY')from employee;
+
+그룹함수
+sum : 누적합계
+avg : 평균
+count : 총 개수
+max : 최대값
+min : 최소값
+
+select sum(salary) "급여총액",
+avg(salary) "급여평균",
+max(salary) "최대급여",
+min(salary) "최소급여"
+from employee;
+
+그룹함수는 null값을 자동으로 제외하고 연산
+select sum(commission) "커미션 총액"
+from employee;
+
+select count(distinct job) as "직업의 종류" from employee;
+
+ex25) 소속 부서별 평균 급여를 부서 번호와 함께 출력하시오
+select dno as "부서번호", avg(salary) as "급여평균" 
+from employee group by dno;
+
+group by 다음에 하나 이상의 열을 나열하여 그룹을 나누면 그룹 및 하위 그룹으로 결과를 반환
+select dno, job, count(*), sum(salary) 
+from employee
+group by dno, job
+order by dno, job;
+
+having 그룹 결과 제한
+ex26) 부서별 급여 총액이 3000 이상인 부서의 번호와 부서별 급여 총액을 구하시오
+select dno,max(salary)
+from employee
+group by dno
+having max(salary) >= 3000;
+
+ex27) MANAGER를 제외하고 급여 총액이 5000 이상인 직급별 급여 총액 구하기
+select job, sum(salary)
+from employee
+where job not like '%MANAGER%'
+group by job 
+having max(salary) >= 5000;
+
+ex28)각 업무별로 급여 최고액, 최저액, 총액, 평균을 출력하시오
+	컬럼의 별칭은 직업, 최대값, 최소값, 합계, 평균 지정하고, 평균은 정수로 반올림 하시오
+select job "직업", max(salary) "최대값", min(salary) "최소값", 
+sum(salary) "합계", round(avg(salary),0) "평균"
+from employee
+group by job;
+
+ex29) 각 부서에 대해 부서번호, 사원수, 부서내의 모든 사원의 평균 급여를 출력하시오
+	평균 급여는 소수점 둘째 자리에서 반올림 하시오.
+select dno "DNO", count(*) "사원수", round(avg(salary),2) "평균급여"
+from employee
+group by dno
+order by dno asc;

@@ -1,0 +1,123 @@
+﻿JSTL
+JSP Standard Tag Library
+JSP에서 사용 가능한 표준 태그 라이브러리
+JSP 코드가 간결해져 가독성이 높아짐
+
+JSTL 커스텀 택그 5가지
+
+기본 기능(core) : 일반 프로그램이 언어에서 제공하는 것과 유사한 변수 선언, 실행
+		  흐름의 제어 기능을 제공.
+		  다른 JSP 페이지로 이동하는 기능도 제공
+c	http://java.sun.com/jsp/jstl/core
+
+
+형식화(format) : 숫자, 날짜, 시간을 포매팅하는 기능과 국제화, 다국어 지원기능을 
+		 제공
+fmt	http://java.sun.com/jsp/jstl/fmt
+
+데이터 베이스(sql) : 데이터베이스의 데이터를 입력/수정/삭제/조회하는 기능을
+		     제공
+sql	http://java.sun.com/jstl/sql
+
+XML처리(xml) : xml 문서를 처리할 때 필요한 기능
+x	http://java.sun.com/jstl/xml
+
+함수처리(functions) : 문자열을 처리하는 함수를 제공
+fn	http://java.sun.com/jstl/fn
+
+
+JSTL 다운로드 주소
+http://jakarta.apache.org
+
+
+JSTL core 태그
+
+<c:set> : 변수값 설정
+<c:remove> : 변수값 삭제
+<c:if> : 조건에 따라 달리 처리
+<c:choose> : 여러 조건에 따라 처리
+<c:forEach> : 반복 처리
+<c:forTokens> : 구분자로 분리된 각각의 토큰을 처리
+<c:import> : 외부 자원을 url로 지정하여 가져다 사용
+<c:redirect> : 지정한 경로로 이동
+<c:url> : url 재작성
+<c:out> : 데이터 출력, <%= %>를 대체
+<c:catch> : 예외처리
+
+<c:forEach> 태그에 사용할 수 있는 속성 중에서 varStatus 속성이 있습니다.
+varStatus 속성은 배열이나 컬렉션과 같은 ㄷ집합체에서 항목의 인덱스 값을
+사용해야 할 경우에 사용
+index는 0부터 순서가 부여되고
+count는 1부터 순서야 부여됨
+
+동일한 이름의 체크박스가 여러 개 존재하는 HTML문서에서 여러 항목을 선택하여
+전송된 정보를 표현하기 위해서 표현 언어에서는 paramValues를 사용한다.
+paramValues는 지정한 이름을 가진 파라미터의 모든 값을 배열 형태로 얻어오기
+때문에 동일한 이름으로 여러번 값이 전송되어도 이를 처리할 수 있다.
+
+
+
+
+JSTL fmt 태그
+국제와 지역화 태그로 JSP페이지에서 다양한 언어를 지원받을 수 있도록 할 수 있다.
+
+숫자 날짜 형식
+formatNumber : 숫자를 양식에 맞추어 출력
+formatDate : 날짜 정보를 담고있는 객체를 포맥팅하여 출력할 때 사용
+parseDate : 문자열을 날짜로 파싱
+parseNumber : 문자열을 수치로 파싱
+setTimeZone : 시간대 별로 시간을 처리할 수 있음
+timeZone : 시간대 별로 시간을 처리할 수 있음
+
+
+로케일 지정
+setLocale, requestEncoding
+
+setLocale
+나라마다 사용하는 화폐의 종류나 날짜를 표현하는 방식이 다름
+
+
+---------------------------------------------------------------
+오라클
+
+설치
+Lbi#1234
+
+세팅
+비밀번호 1234
+
+hr 1234
+
+----------------------------------------------------------------
+
+cmd에서
+
+sqlplus / as sysdba
+
+create user 아이디 identified by 비밀번호;
+
+grant connect, resource, dba to 아이디;
+
+-----------------------------------------------------------------
+접속한 아이디 확인하기
+show user
+
+password변경하기
+cmd에서
+sqlplus / as sysdba
+alter user 아이디 identified by 변경번호
+-----------------------------------------------------------------
+
+DB권한에서 아이디권한으로 연결 바꾸기
+conn 아이디/비밀번호
+
+-----------------------------------------------------------------
+전체 테이블 보기
+select * from tab;
+-------
+hr에 비밀번호 설정 못한사람
+cmd ( 혹은 cntl+c )
+sqlplus / as sysdba
+alter user hr identified by 1234 account unlock;
+conn hr/1234		-연결
+select * from tab;	-확인
