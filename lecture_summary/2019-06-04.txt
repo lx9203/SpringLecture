@@ -1,4 +1,4 @@
-project01 Å×ÀÌºí »ı¼º
+ï»¿project01 í…Œì´ë¸” ìƒì„±
 
 create table projectmember(
 name varchar2(50) not null primary key,
@@ -6,6 +6,6 @@ tel varchar(20) not null,
 address varchar(50) not null);
 
 insert into projectmember (name, tel, address)
-values ('Banana', '010-8282-8282', '´ëÀü±¤¿ª½Ã ¼­±¸ ¿ùÆòµ¿');
+values ('Banana', '010-8282-8282', 'ëŒ€ì „ê´‘ì—­ì‹œ ì„œêµ¬ ì›”í‰ë™');
 
 commit;
