@@ -1,0 +1,11 @@
+project01 테이블 생성
+
+create table projectmember(
+name varchar2(50) not null primary key,
+tel varchar(20) not null,
+address varchar(50) not null);
+
+insert into projectmember (name, tel, address)
+values ('Banana', '010-8282-8282', '대전광역시 서구 월평동');
+
+commit;

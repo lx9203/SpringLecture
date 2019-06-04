@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-<typeInfo handle="=spring01/src\/main\/java&lt;com.example.spring01.model.dao{MemberDAO.java[MemberDAO" modifiers="513" timestamp="1559543099762"/>
-<typeInfo handle="=spring01/src\/main\/java&lt;com.example.spring01.service{MemberService.java[MemberService" modifiers="513" timestamp="1559544265288"/>
+<typeInfo handle="=Project01/src\/main\/java&lt;com.prectice.project01.dao{MemberDAO.java[MemberDAO" modifiers="513" timestamp="1559635538237"/>
+<typeInfo handle="=Project01/D:\/seong\/강의자료\/apache-tomcat-9.0.20\/lib\/catalina-tribes.jar&lt;org.apache.catalina.tribes(Member.class[Member" modifiers="1537" timestamp="1556893650000"/>
+<typeInfo handle="=Project01/src\/main\/java&lt;com.prectice.project01.service{MemberService.java[MemberService" modifiers="513" timestamp="1559635637781"/>
+<typeInfo handle="=Project01/D:\/seong\/강의자료\/apache-tomcat-9.0.20\/lib\/ecj-4.10.jar&lt;org.eclipse.jdt.internal.compiler.apt.model(TypesImpl$MemberInTypeFinder.class[MemberInTypeFinder" modifiers="1546" timestamp="1556893650000"/>
 </typeInfoHistroy>

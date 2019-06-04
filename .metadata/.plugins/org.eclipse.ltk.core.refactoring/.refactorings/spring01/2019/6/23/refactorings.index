@@ -1,10 +1,5 @@
-1559528324934	Rename resource 'doE.jsp'
-1559531124500	Rename resource 'apdls.jsp'
-1559531507193	Delete element
-1559540002752	Copy compilation unit
-1559540008028	Move compilation unit
-1559543639485	Copy file
-1559545713441	Delete element
-1559545742531	Delete element
-1559546313816	Move file
-1559546808005	Delete element
+1559629865966	Copy package
+1559633385273	Copy compilation units
+1559636171139	Copy files
+1559636180156	Copy folder
+1559636193088	Copy package
