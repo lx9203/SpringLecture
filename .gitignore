@@ -1,4 +1,4 @@
-target
+.target
 .metadata
 .settings
 .classpath
@@ -10,3 +10,6 @@ target
 /.recommenders/
 /build/
 /bin/
+/tmp/
+*.swp
+.factorypath
