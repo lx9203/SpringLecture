@@ -12,4 +12,5 @@
 /bin/
 /tmp/
 *.swp
-.factorypath
+
+.metadata/
