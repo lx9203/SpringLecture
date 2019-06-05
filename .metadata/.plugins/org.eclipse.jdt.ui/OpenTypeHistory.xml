@@ -4,4 +4,6 @@
 <typeInfo handle="=Project01/D:\/seong\/강의자료\/apache-tomcat-9.0.20\/lib\/catalina-tribes.jar&lt;org.apache.catalina.tribes(Member.class[Member" modifiers="1537" timestamp="1556893650000"/>
 <typeInfo handle="=Project01/src\/main\/java&lt;com.prectice.project01.service{MemberService.java[MemberService" modifiers="513" timestamp="1559635637781"/>
 <typeInfo handle="=Project01/D:\/seong\/강의자료\/apache-tomcat-9.0.20\/lib\/ecj-4.10.jar&lt;org.eclipse.jdt.internal.compiler.apt.model(TypesImpl$MemberInTypeFinder.class[MemberInTypeFinder" modifiers="1546" timestamp="1556893650000"/>
+<typeInfo handle="=Project02/src\/main\/java&lt;com.product.spring.model.shop.dao{ProductDAO.java[ProductDAO" modifiers="513" timestamp="1559705056944"/>
+<typeInfo handle="=Project02/src\/main\/java&lt;com.product.spring.shop.service{ProductService.java[ProductService" modifiers="513" timestamp="1559705510623"/>
 </typeInfoHistroy>
