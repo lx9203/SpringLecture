@@ -1698,3 +1698,240 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:41.166
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:41.167
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@6577985e[org.springframework.tooling.boot.ls:1.7.0.201905231938(id=623)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:41.171
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:41.221
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.494
+!MESSAGE Boot LS startup time from start to initialized: 6314ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.572
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.DIifhVIH
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.573
+!MESSAGE subscribing to classpath changes: sts4.classpath.DIifhVIH
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.574
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.575
+!MESSAGE subsribers = [sts4.classpath.DIifhVIH]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.576
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.579
+!MESSAGE project spring03 ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.580
+!MESSAGE project Project01 ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.581
+!MESSAGE Preparing classpath changed notification spring03
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.581
+!MESSAGE project Project02 ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.581
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.582
+!MESSAGE project Servers ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.582
+!MESSAGE project Servers SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.583
+!MESSAGE project sample ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.583
+!MESSAGE project spring01 ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.584
+!MESSAGE project spring02 ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.584
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.584
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.DIifhVIH => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.588
+!MESSAGE classpath=73 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.588
+!MESSAGE executing callback sts4.classpath.DIifhVIH spring03 false 73
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.610
+!MESSAGE executing callback sts4.classpath.DIifhVIH SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.611
+!MESSAGE Preparing classpath changed notification spring02
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.611
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.613
+!MESSAGE classpath=73 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.614
+!MESSAGE executing callback sts4.classpath.DIifhVIH spring02 false 73
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.642
+!MESSAGE executing callback sts4.classpath.DIifhVIH SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.644
+!MESSAGE Preparing classpath changed notification spring01
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.644
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.651
+!MESSAGE classpath=73 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.652
+!MESSAGE executing callback sts4.classpath.DIifhVIH spring01 false 73
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.667
+!MESSAGE executing callback sts4.classpath.DIifhVIH SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.667
+!MESSAGE Preparing classpath changed notification sample
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.668
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.736
+!MESSAGE classpath=87 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.737
+!MESSAGE executing callback sts4.classpath.DIifhVIH sample false 87
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.744
+!MESSAGE executing callback sts4.classpath.DIifhVIH SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.745
+!MESSAGE Preparing classpath changed notification Project02
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.745
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.750
+!MESSAGE classpath=90 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.750
+!MESSAGE executing callback sts4.classpath.DIifhVIH Project02 false 90
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.757
+!MESSAGE executing callback sts4.classpath.DIifhVIH SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.767
+!MESSAGE Preparing classpath changed notification Project01
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.767
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.771
+!MESSAGE classpath=87 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.771
+!MESSAGE executing callback sts4.classpath.DIifhVIH Project01 false 87
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:29:47.781
+!MESSAGE executing callback sts4.classpath.DIifhVIH SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:31:12.247
+!MESSAGE Preparing classpath changed notification spring03
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:31:12.248
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:31:12.249
+!MESSAGE classpath=70 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:31:12.250
+!MESSAGE executing callback sts4.classpath.DIifhVIH spring03 false 70
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:31:12.348
+!MESSAGE executing callback sts4.classpath.DIifhVIH SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:31:19.525
+!MESSAGE Preparing classpath changed notification spring03
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:31:19.526
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:31:19.528
+!MESSAGE classpath=70 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:31:19.529
+!MESSAGE executing callback sts4.classpath.DIifhVIH spring03 false 70
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:31:19.541
+!MESSAGE executing callback sts4.classpath.DIifhVIH SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:33:58.374
+!MESSAGE Preparing classpath changed notification spring03
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:33:58.375
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:33:58.384
+!MESSAGE classpath=71 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:33:58.385
+!MESSAGE executing callback sts4.classpath.DIifhVIH spring03 false 71
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:33:58.413
+!MESSAGE executing callback sts4.classpath.DIifhVIH SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:34:00.444
+!MESSAGE Preparing classpath changed notification spring03
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:34:00.445
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:34:00.447
+!MESSAGE classpath=71 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:34:00.447
+!MESSAGE executing callback sts4.classpath.DIifhVIH spring03 false 71
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:34:00.620
+!MESSAGE executing callback sts4.classpath.DIifhVIH SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:36:49.824
+!MESSAGE Preparing classpath changed notification spring03
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:36:49.824
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:36:49.826
+!MESSAGE classpath=70 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:36:49.826
+!MESSAGE executing callback sts4.classpath.DIifhVIH spring03 false 70
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:36:49.841
+!MESSAGE executing callback sts4.classpath.DIifhVIH SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:38:19.956
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.DIifhVIH
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:38:19.956
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.DIifhVIH
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:38:19.957
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-08 14:38:19.957
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.DIifhVIH => OK

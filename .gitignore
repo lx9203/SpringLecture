@@ -12,4 +12,4 @@
 /bin/
 /tmp/
 *.swp
-.metadata/
+*.metadata
