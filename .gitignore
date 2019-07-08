@@ -13,3 +13,5 @@
 /tmp/
 *.swp
 *.metadata
+.metadata*
+*.metadata*
